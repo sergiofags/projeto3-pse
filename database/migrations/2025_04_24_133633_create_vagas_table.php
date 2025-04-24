@@ -15,12 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('titulo');
             $table->text('responsabilidades')->nullable();
-            $table->text('rquisitos')->nullable();
+            $table->text('requisitos')->nullable();
             $table->string('carga_horaria');
             $table->float('remuneracao');
             $table->string('beneficios')->nullable();
             $table->integer('quantidade');
-            $table->date('data_incio');
+            $table->date('data_inicio');
             $table->date('data_fim');
             $table->string('tipo_vaga');
             $table->timestamps();

@@ -13,23 +13,23 @@ class Pessoa extends Model
     protected $fillable = [
         'id_user',
         'nome',
-        'profile_photo',
-        'about',
-        'linkedin_profile',
+        'foto_perfil',
+        'sobre',
+        'linkedin',
         'cpf',
-        'birthDate',
-        'gender',
-        'deficiency',
-        'militar_service',
-        'phone',
-        'street_addres',
-        'neighborhood',
-        'city',
-        'state',
-        'house_number',
-        'complement',
+        'data_nascimento',
+        'genero',
+        'deficiencia',
+        'servico_militar',
+        'telefone',
+        'rua',
+        'bairro',
+        'cidade',
+        'estado',
+        'numero',
+        'complemento',
         'cep',
-        'reference'
+        'referencia'
     ];
 
     // BelongsTo = pertence a um registro de outra tabela
@@ -40,28 +40,28 @@ class Pessoa extends Model
         return $this->belongsTo(User::class, 'id_user');
     }
 
-    public function candidacies(): HasMany
+    public function candidatura(): HasMany
     {
-        return $this->hasMany(Candidacy::class, 'id_person');
+        return $this->hasMany(Candidatura::class, 'id_pessoa');
     }
 
-    public function experiences(): HasMany
+    public function experiencia(): HasMany
     {
-        return $this->hasMany(Experience::class, 'id_person');
+        return $this->hasMany(Experiencia::class, 'id_pessoa');
     }
 
-    public function complementaryExperiences(): HasMany
+    public function experienciaComplementar(): HasMany
     {
-        return $this->hasMany(ComplementaryExperience::class, 'id_person');
+        return $this->hasMany(ExperienciaComplementar::class, 'id_pessoa');
     }
 
-    public function documents(): HasMany
+    public function documento(): HasMany
     {
-        return $this->hasMany(Document::class, 'id_person');
+        return $this->hasMany(Documento::class, 'id_pessoa');
     }
 
-    public function hirings(): HasMany
+    public function contratacao(): HasMany
     {
-        return $this->hasMany(Hiring::class, 'id_person');
+        return $this->hasMany(Contratacao::class, 'id_pessoa');
     }
 }

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->enum('tipo_experiencia', ['Idioma', 'Curso']);
             $table->string('titulo');
             $table->string('descricao');
-            $table->enum('nivel_idioma', ['Básico', 'Intermediário', 'Avancado', 'Fluente/Nativo']);
+            $table->enum('nivel_idioma', ['Básico', 'Intermediário', 'Avançado', 'Fluente/Nativo']);
             $table->string('certificado');
             $table->date('data_inicio');
             $table->date('data_fim');

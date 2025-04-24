@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('id_pessoa')->constrained('pessoas');
 
             $table->enum('tipo_documento', ['Candidatura', 'Contratacao']);
-            $table->string('file')->nullable();
+            $table->string('documento')->nullable();
             
             $table->enum('nome_documento', ['AtestadoMatricula', 'HistoricoEscolar', 'Curriculo', 'CoeficienteRendimento', 'Foto3x4', 'CedulaIdentidadeOuCNH', 'CadastroPessoaFisica', 'CTPS', 'CarteiraDeReservista', 'ComprovanteDeResidencia', 'AntecedentesCriminaisECivel', 'AntecedentesCriminaisPoliciaFederal', 'VacinacaFebreAmarela', 'VacinacaCovid19', 'GrupoSanguineo', 'ComprovanteMatricula', 'AtestadadoFrequencia']);
 
