@@ -46,4 +46,14 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function isCandidato(): bool
+    {
+        return $this->tipo_perfil === 'Candidato';
+    }
+
+    public function isAdmin(): bool
+    {
+        return in_array($this->tipo_perfil, ['Administrador', 'Super Administrador']);
+    }
 }
