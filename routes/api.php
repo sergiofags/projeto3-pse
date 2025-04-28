@@ -9,7 +9,7 @@ use App\Https\Middleware\CheckUserRole;
 Route::get('/usuarios', [UsuarioController::class, 'index'])->name('usuarios.index');
 Route::post('/usuarios', [UsuarioController::class, 'store'])->name('usuarios.store');
 Route::put('/usuarios/{usuario}', [UsuarioController::class, 'update'])->name('usuarios.update');
-Route::delete('/usuarios/{usuario}', [UsuarioController::class, 'destroy'])->name('usuarios.destroy');
+// Route::delete('/usuarios/{usuario}', [UsuarioController::class, 'destroy'])->name('usuarios.destroy'); TESTE
 
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
